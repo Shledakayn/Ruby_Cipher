@@ -14,8 +14,8 @@ cipher_alpha = [
 message = "Something"
 message_array = message.chars
 message_array.each do |letter|
-  searching = cipher_alpha.find_index(letter.upcase) + 5
+  searching = cipher_alpha.find_index(letter.upcase!)
   a = []
-  a << cipher_alpha[searching]
-  p a.join
+  cipher_alpha[searching] >> a
+  p a
 end
